@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import MovieList from "./components/MoviesList";
+
+import Navbar from "./components/Navbar/Navbar";
+import { GlobalStyle } from "./globalStyles";
 
 
 function App() {
@@ -22,7 +27,9 @@ function App() {
 
   return (
     <>
-      <MovieList movies={movies} />
+    <GlobalStyle />
+    <Navbar />
+    <MovieList movies={movies} />
     </>
   );
 }
